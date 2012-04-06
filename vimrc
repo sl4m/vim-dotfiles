@@ -2,11 +2,12 @@ set nocompatible
 syntax on
 
 filetype off
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 filetype plugin indent on
 
 compiler ruby
 
+set history=10000
 set hlsearch
 set number
 set showmatch
@@ -20,8 +21,8 @@ set wrap
 set dir=/tmp//
 set scrolloff=5
 
-set ignorecase
-set smartcase
+set ignorecase smartcase
+set cursorline
 
 let g:AckAllFiles = 0
 let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
@@ -77,7 +78,7 @@ command SudoW w !sudo tee %
 cnoremap <Tab> <C-L><C-D>
 
 " Clear the search buffer when hitting return
-:nnoremap <CR> :nohlsearch<cr>
+":nnoremap <CR> :nohlsearch<cr>
 
 " no arrow keys in normal and insert modes
 map <Left> :echo "no!"<cr>
@@ -101,6 +102,7 @@ endif
 " Highlight trailing whitespace
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
+
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
