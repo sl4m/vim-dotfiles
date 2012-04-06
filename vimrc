@@ -76,6 +76,19 @@ map <silent> <LocalLeader>uc :TComment<CR>
 command SudoW w !sudo tee %
 cnoremap <Tab> <C-L><C-D>
 
+" Clear the search buffer when hitting return
+:nnoremap <CR> :nohlsearch<cr>
+
+" no arrow keys in normal and insert modes
+map <Left> :echo "no!"<cr>
+map <Right> :echo "no!"<cr>
+map <Up> :echo "no!"<cr>
+map <Down> :echo "no!"<cr>
+imap <Left> <Nop>
+imap <Right> <Nop>
+imap <Up> <Nop>
+imap <Down> <Nop>
+
 if version >= 700
     autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
     autocmd FileType tex setlocal spell spelllang=en_us
