@@ -44,6 +44,8 @@ let g:fuzzy_ignore = "*.log,tmp/*,db/sphinx/*,data"
 let g:fuzzy_ceiling = 50000
 let g:fuzzy_matching_limit = 10
 
+let g:vitality_fix_cursor = 0
+
 let g:no_html_toolbar = 'yes'
 
 let coffee_no_trailing_space_error = 1
@@ -130,6 +132,18 @@ set statusline+=%1*%y%*%*\                " file type
 set statusline+=%10(L(%l/%L)%)\           " line
 set statusline+=%2(C(%v/125)%)\           " column
 set statusline+=%P                        " percentage of file
+
+autocmd FocusGained * call s:RefreshFiles()
+autocmd BufWritePost * call s:RefreshFiles()
+
+function s:RefreshFiles(...)
+  if exists(":CommandTFlush") == 2
+    CommandTFlush
+  endif
+  if exists(":FuzzyFinderTextMateRefreshFiles") == 2
+    FuzzyFinderTextMateRefreshFiles
+  endif
+endfunction
 
 " http://techspeak.plainlystated.com/2009/08/vim-tohtml-customization.html
 function! DivHtml(line1, line2)
