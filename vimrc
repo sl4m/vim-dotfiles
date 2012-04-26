@@ -8,14 +8,18 @@ filetype plugin indent on
 compiler ruby
 
 set history=10000
-set hlsearch
 set number
 set showmatch
 set incsearch
+set hlsearch
 set background=dark
 set hidden
 set backspace=indent,eol,start
-set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+set textwidth=0
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
 set ruler
 set wrap
 set dir=/tmp//
