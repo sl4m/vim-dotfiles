@@ -24,6 +24,7 @@ set ruler
 set wrap
 set dir=/tmp//
 set scrolloff=5
+set tildeop
 
 set ignorecase smartcase
 set cursorline
@@ -78,11 +79,13 @@ map <LocalLeader>aw :Ack '<C-R><C-W>'
 map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
+map <silent> <LocalLeader>t1 :colorscheme Tomorrow-Night<CR>
+map <silent> <LocalLeader>t2 :colorscheme Tomorrow<CR>
 command SudoW w !sudo tee %
 cnoremap <Tab> <C-L><C-D>
 
 " Clear the search buffer when hitting return
-":nnoremap <CR> :nohlsearch<cr>
+"nnoremap <CR> :nohlsearch<cr>
 
 " no arrow keys in normal and insert modes
 map <Left> :echo "no!"<cr>
