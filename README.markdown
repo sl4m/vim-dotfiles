@@ -1,21 +1,18 @@
 ## Install
 
-After cloning this project, you can run the following to link these dotfiles
-into your home directory:
-
-    ./activate.rb
-
-Be warned: this will overwrite any existing .vimrc, .gvimrc or .vim/ files you
-have in your home directory.
-
-If you plan on using command-t, you'll need to build the C extension. Make sure
-to use the ruby you built vim against. Here's what I ran:
+After cloning this project, run the following:
 
     cd vim/bundle/command-t/ruby/command-t
     rvm use system
     ruby extconf.rb
     make
 
+    git submodule update --init
+    ./activate.rb
+
+Be warned, the last command will overwrite any existing .vimrc, .gvimrc or .vim/ files you
+have in your home directory.
+
 ## Credit
 
-This is a fork of Drew Olsen's [vim_dotfiles](https://github.com/drewolson/vim_dotfiles).
+This was originally a fork of Drew Olsen's [vim_dotfiles](https://github.com/drewolson/vim_dotfiles).
