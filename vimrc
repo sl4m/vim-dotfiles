@@ -75,7 +75,6 @@ map <silent> <LocalLeader>cf :CommandTFlush<CR>
 map <silent> <LocalLeader>cb :CommandTBuffer<CR>
 map <silent> <LocalLeader>cj :CommandTJump<CR>
 map <silent> <LocalLeader>ct :CommandTTag<CR>
-map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj<CR>
 imap <C-L> <SPACE>=><SPACE>
 
 " no arrow keys in normal and insert modes
