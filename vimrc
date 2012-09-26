@@ -26,11 +26,6 @@ set cursorline
 set wrap
 set noswapfile
 set bs=2
-set winwidth=90
-set winminwidth=15
-set winheight=5
-set winminheight=5
-set winheight=999
 
 if &t_Co == 256
   colorscheme Tomorrow-Night

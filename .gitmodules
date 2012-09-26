@@ -10,3 +10,12 @@
 [submodule "vim/bundle/colors"]
 	path = vim/bundle/colors
 	url = git://github.com/chriskempson/vim-tomorrow-theme.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/vim-clojure"]
+	path = vim/bundle/vim-clojure
+	url = https://github.com/vim-scripts/VimClojure.git
+[submodule "vim/bundle/vim-coffeescript"]
+	path = vim/bundle/vim-coffeescript
+	url = https://github.com/kchmck/vim-coffee-script.git
