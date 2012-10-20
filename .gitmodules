@@ -19,3 +19,9 @@
 [submodule "vim/bundle/vim-coffeescript"]
 	path = vim/bundle/vim-coffeescript
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
+	url = git://github.com/mileszs/ack.vim.git
