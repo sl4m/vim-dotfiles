@@ -1,16 +1,25 @@
+## Requirements
+
+For Mac OS X, install the latest stable `vim` via homebrew:
+
+    homebrew install vim
+
+For Linux, install the latest vim using your distro's package manager
+
 ## Install
 
-After cloning this project, run the following:
-
-    cd vim/bundle/command-t/ruby/command-t
-    rvm use system
-    ruby extconf.rb
-    make
+After cloning the project, run the following:
 
     git submodule update --init
     ./activate.rb
 
-Be warned, the last command will overwrite any existing .vimrc, .gvimrc or .vim/ files you
+    cd vim/bundle/command-t/ruby/command-t
+    rvm use system
+    ruby extconf.rb
+    make clean
+    make
+
+Be warned, running `./activate.rb` will overwrite any existing .vimrc, .gvimrc or .vim/ files you
 have in your home directory.
 
 ## Credit
