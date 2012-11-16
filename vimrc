@@ -102,6 +102,10 @@ noremap <leader>p :set paste<CR>"*p<CR>:set nopaste<CR>
 noremap <leader>P :set paste<CR>"*P<CR>:set nopaste<CR>
 vnoremap <leader>y "*ygv
 
+" window width
+set winwidth=90
+set winminwidth=15
+
 " no arrow keys in normal and insert modes
 nnoremap <up> <nop>
 nnoremap <down> <nop>
