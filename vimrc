@@ -139,6 +139,9 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+" convert dos format to unix format
+noremap <leader>ff :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR>
+
 " HTML tag folding
 nnoremap <leader>ft Vatzf
 
