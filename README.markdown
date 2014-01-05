@@ -14,7 +14,7 @@ After cloning the project, run the following:
     ./activate.rb
 
     cd vim/bundle/command-t/ruby/command-t
-    rvm use system
+    <switch to your system ruby>	
     ruby extconf.rb
     make clean
     make
