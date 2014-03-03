@@ -44,6 +44,7 @@ set bs=2
 
 if &t_Co == 256
   colorscheme Tomorrow-Night
+  set t_ut=
 endif
 
 " highlight trailing whitespace
