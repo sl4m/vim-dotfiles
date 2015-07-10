@@ -80,28 +80,7 @@ set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
-map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
-map <silent> <LocalLeader>nr :NERDTree<CR>
-map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-let NERDTreeShowHidden=1
-
-map <silent> <LocalLeader>t :CommandT<CR>
-map <silent> <LocalLeader>cf :CommandTFlush<CR>
-map <silent> <LocalLeader>cb :CommandTBuffer<CR>
-map <silent> <LocalLeader>cj :CommandTJump<CR>
-map <silent> <LocalLeader>ct :CommandTTag<CR>
-let g:CommandTAcceptSelectionSplitMap=['<C-s>']
-let g:CommandTAcceptSelectionVSplitMap=['<C-v>']
-let g:CommandTCancelMap=['<Esc>', '<C-c>']
-let g:CommandTMaxHeight=10
-
 imap <C-L> <SPACE>=><SPACE>
-
-" copy and paste to Mac OS X clipboard
-noremap <leader>y "*y
-noremap <leader>p :set paste<CR>"*p<CR>:set nopaste<CR>
-noremap <leader>P :set paste<CR>"*P<CR>:set nopaste<CR>
-vnoremap <leader>y "*ygv
 
 " window width
 set winwidth=90
@@ -147,11 +126,22 @@ vnoremap <F1> <ESC>
 " convert dos format to unix format
 noremap <leader>ff :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR>
 
-" HTML tag folding
-nnoremap <leader>ft Vatzf
+" plugin specific settings
 
-" CSS properties sorting
-nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
+map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
+map <silent> <LocalLeader>nr :NERDTree<CR>
+map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+let NERDTreeShowHidden=1
+
+map <silent> <LocalLeader>t :CommandT<CR>
+map <silent> <LocalLeader>cf :CommandTFlush<CR>
+map <silent> <LocalLeader>cb :CommandTBuffer<CR>
+map <silent> <LocalLeader>cj :CommandTJump<CR>
+map <silent> <LocalLeader>ct :CommandTTag<CR>
+let g:CommandTAcceptSelectionSplitMap=['<C-s>']
+let g:CommandTAcceptSelectionVSplitMap=['<C-v>']
+let g:CommandTCancelMap=['<Esc>', '<C-c>']
+let g:CommandTMaxHeight=10
 
 let vimclojure#HighlightBuiltins=0
 let vimclojure#ParenRainbow=1
