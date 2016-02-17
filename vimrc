@@ -36,6 +36,9 @@ set showmatch
 set hlsearch
 noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 nnoremap <leader>a :Ack<space>
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
 
 set cursorline
 set wrap
