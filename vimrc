@@ -1,10 +1,6 @@
-" some gems taken from https://bitbucket.org/sjl/dotfiles
-
 set nocompatible
 syntax on
 
-filetype off
-call pathogen#infect()
 filetype plugin indent on
 
 set modelines=0
@@ -130,6 +126,7 @@ vnoremap <F1> <ESC>
 noremap <leader>ff :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR>
 
 " plugin specific settings
+so vim/plugin_list.vim
 
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
@@ -137,28 +134,8 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 
 map <silent> <LocalLeader>t :CommandT<CR>
-map <silent> <LocalLeader>cf :CommandTFlush<CR>
-map <silent> <LocalLeader>cb :CommandTBuffer<CR>
-map <silent> <LocalLeader>cj :CommandTJump<CR>
-map <silent> <LocalLeader>ct :CommandTTag<CR>
-let g:CommandTAcceptSelectionSplitMap=['<C-s>']
-let g:CommandTAcceptSelectionVSplitMap=['<C-v>']
 let g:CommandTCancelMap=['<Esc>', '<C-c>']
 let g:CommandTMaxHeight=10
 
 let vimclojure#HighlightBuiltins=0
 let vimclojure#ParenRainbow=1
-
-command! ScratchToggle call ScratchToggle()
-
-function! ScratchToggle()
-    if exists("w:is_scratch_window")
-        unlet w:is_scratch_window
-        exec "q"
-    else
-        exec "normal! :Sscratch\<cr>\<C-W>L"
-        let w:is_scratch_window = 1
-    endif
-endfunction
-
-nnoremap <silent> <leader><tab> :ScratchToggle<cr>
