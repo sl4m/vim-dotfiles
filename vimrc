@@ -126,7 +126,7 @@ vnoremap <F1> <ESC>
 noremap <leader>ff :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR>
 
 " plugin specific settings
-so vim/plugin_list.vim
+so ~/.vim/plugin_list.vim
 
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
