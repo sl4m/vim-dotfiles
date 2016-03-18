@@ -85,6 +85,19 @@ imap <C-L> <SPACE>=><SPACE>
 set winwidth=90
 set winminwidth=15
 
+execute "set <M-b>=\eb"
+execute "set <M-f>=\ef"
+
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-d> <Delete>
+cnoremap <M-b> <S-Left>
+cnoremap <M-f> <S-Right>
+
 " no arrow keys in normal and insert modes
 nnoremap <up> <nop>
 nnoremap <down> <nop>
