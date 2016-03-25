@@ -15,6 +15,7 @@ Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'fatih/vim-go',             {'for': 'go'}
 Plug 'vim-ruby/vim-ruby',        {'for': 'ruby'}
 Plug 'rust-lang/rust.vim',       {'for': 'rust'}
+Plug 'kana/vim-vspec',           {'for': 'vim'}
 
 " misc
 Plug 'wikitopian/hardmode'
