@@ -1,11 +1,10 @@
 set nocompatible
-syntax on
 
 filetype plugin indent on
+syntax on
 
 set modelines=0
 set encoding=utf-8
-set autoindent
 set nosmartindent
 set history=10000
 set number
@@ -17,9 +16,23 @@ set textwidth=0
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set bs=2
+set autoindent
 set expandtab
 
+set ttyfast
+set lazyredraw
+
+set cursorline
+set wrap
+set noswapfile
+
 nmap , \
+
+if &t_Co == 256
+  colorscheme Tomorrow-Night
+  set t_ut=
+endif
 
 " search
 nnoremap / /\v
@@ -34,16 +47,6 @@ noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 nnoremap <leader>a :Ack<space>
 if executable('ag')
   let g:ackprg = 'ag --nogroup --nocolor --column'
-endif
-
-set cursorline
-set wrap
-set noswapfile
-set bs=2
-
-if &t_Co == 256
-  colorscheme Tomorrow-Night
-  set t_ut=
 endif
 
 " highlight trailing whitespace
@@ -79,24 +82,9 @@ set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
-imap <C-L> <SPACE>=><SPACE>
-
 " window width
 set winwidth=90
 set winminwidth=15
-
-execute "set <M-b>=\eb"
-execute "set <M-f>=\ef"
-
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
-cnoremap <C-b> <Left>
-cnoremap <C-f> <Right>
-cnoremap <C-d> <Delete>
-cnoremap <M-b> <S-Left>
-cnoremap <M-f> <S-Right>
 
 " no arrow keys in normal and insert modes
 nnoremap <up> <nop>
@@ -111,6 +99,8 @@ vnoremap <up> <nop>
 vnoremap <down> <nop>
 vnoremap <left> <nop>
 vnoremap <right> <nop>
+
+" navigate within wrapped line
 noremap j gj
 noremap k gk
 noremap gj j
@@ -119,9 +109,19 @@ noremap gk k
 " clean trailing whitespace
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
-" Emacs bindings in command line mode
-cnoremap <c-a> <home>
-cnoremap <c-e> <end>
+" emacs bindings in command line mode
+execute "set <M-b>=\eb"
+execute "set <M-f>=\ef"
+
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-d> <Delete>
+cnoremap <M-b> <S-Left>
+cnoremap <M-f> <S-Right>
 
 " keep the cursor in place while joining lines
 nnoremap J mzJ`z
@@ -138,9 +138,13 @@ vnoremap <F1> <ESC>
 " convert dos format to unix format
 noremap <leader>ff :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR>
 
-" plugin specific settings
+" ruby rocket
+imap <C-L> <SPACE>=><SPACE>
+
+" source plugins
 so ~/.vim/plugin_list.vim
 
+" plugin specific settings
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
