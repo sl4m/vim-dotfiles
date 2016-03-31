@@ -3,8 +3,8 @@ call plug#begin('~/.vim/plugged')
 " tools
 
 Plug 'mileszs/ack.vim'
-Plug 'wincent/Command-T'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree'
 Plug 'mtth/scratch.vim'
 
@@ -18,6 +18,7 @@ Plug 'rust-lang/rust.vim',       {'for': 'rust'}
 Plug 'kana/vim-vspec',           {'for': 'vim'}
 
 " misc
+
 Plug 'wikitopian/hardmode'
 
 call plug#end()

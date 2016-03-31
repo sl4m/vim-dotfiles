@@ -20,13 +20,6 @@ After cloning the project, run the following:
     vim
     :PlugInstall
 
-    # Quit vim and set up Command-T
-    cd vim/plugged/Command-T/ruby/command-t
-    <switch to your system ruby>
-    ruby extconf.rb
-    make clean
-    make
-
 WARNING: running `./activate.rb` will overwrite existing .vimrc and .vim you
 have in your home directory.
 

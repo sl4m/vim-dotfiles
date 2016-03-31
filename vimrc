@@ -150,9 +150,7 @@ map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 
-map <silent> <LocalLeader>t :CommandT<CR>
-let g:CommandTCancelMap=['<Esc>', '<C-c>']
-let g:CommandTMaxHeight=10
+map <silent> <LocalLeader>t :FZF<CR>
 
 let vimclojure#HighlightBuiltins=0
 let vimclojure#ParenRainbow=1
