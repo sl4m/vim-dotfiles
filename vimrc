@@ -110,9 +110,6 @@ noremap gk k
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
 " emacs bindings in command line mode
-execute "set <M-b>=\eb"
-execute "set <M-f>=\ef"
-
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-p> <Up>
@@ -120,8 +117,8 @@ cnoremap <C-n> <Down>
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
 cnoremap <C-d> <Delete>
-cnoremap <M-b> <S-Left>
-cnoremap <M-f> <S-Right>
+cnoremap <Esc>b <S-Left>
+cnoremap <Esc>f <S-Right>
 
 " keep the cursor in place while joining lines
 nnoremap J mzJ`z
