@@ -1,5 +1,8 @@
 set nocompatible
 
+" source plugins
+so ~/.vim/plugin_list.vim
+
 filetype plugin indent on
 syntax on
 
@@ -137,6 +140,3 @@ noremap <leader>ff :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR>
 
 " ruby rocket
 imap <C-L> <SPACE>=><SPACE>
-
-" source plugins
-so ~/.vim/plugin_list.vim
