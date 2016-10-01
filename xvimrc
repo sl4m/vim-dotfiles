@@ -1,0 +1,16 @@
+set wrap
+
+set expandtab
+
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set gdefault
+set hlsearch
+
+" navigate within wrapped line
+nmap j gj
+nmap k gk
+nmap gj j
+nmap gk k
