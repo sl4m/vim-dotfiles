@@ -16,6 +16,7 @@ Plug 'fatih/vim-go',             {'for': 'go'}
 Plug 'fatih/vim-hclfmt',         {'for': ['hcl', 'nomad', 'tf']}
 Plug 'vim-ruby/vim-ruby',        {'for': 'ruby'}
 Plug 'rust-lang/rust.vim',       {'for': 'rust'}
+Plug 'cespare/vim-toml',         {'for': 'toml'}
 Plug 'kana/vim-vspec',           {'for': 'vim'}
 
 " misc
