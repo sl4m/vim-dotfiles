@@ -12,6 +12,7 @@ Plug 'mtth/scratch.vim'
 
 Plug 'guns/vim-clojure-static',  {'for': 'clojure'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
+Plug 'elixir-lang/vim-elixir',   {'for': 'elixir'}
 Plug 'fatih/vim-go',             {'for': 'go'}
 Plug 'fatih/vim-hclfmt',         {'for': ['hcl', 'nomad', 'tf']}
 Plug 'vim-ruby/vim-ruby',        {'for': 'ruby'}
