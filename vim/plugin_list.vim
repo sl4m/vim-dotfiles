@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 " tools
 
 Plug 'mileszs/ack.vim'
+Plug 'ap/vim-buftabline'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree'
