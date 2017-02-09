@@ -8,6 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree'
 Plug 'mtth/scratch.vim'
+Plug 'reedes/vim-wordy'
 
 " languages
 
