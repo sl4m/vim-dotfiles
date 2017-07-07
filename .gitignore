@@ -1,4 +1,5 @@
 *.DS_Store
 *.sw[op]
 .netrwhist
+vim/plugin/hardmode.vim
 vim/plugged
