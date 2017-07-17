@@ -27,6 +27,6 @@ Plug 'kana/vim-vspec',           {'for': 'vim'}
 
 " misc
 
-Plug 'wikitopian/hardmode'
+Plug 'takac/vim-hardtime'
 
 call plug#end()
