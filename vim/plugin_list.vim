@@ -21,6 +21,7 @@ Plug 'fatih/vim-hclfmt',         {'for': ['hcl', 'nomad', 'tf']}
 Plug 'pangloss/vim-javascript',  {'for': 'javascript'}
 Plug 'mxw/vim-jsx',              {'for': 'javascript'}
 Plug 'vim-ruby/vim-ruby',        {'for': 'ruby'}
+Plug 'tpope/vim-endwise',        {'for': 'ruby'}
 Plug 'rust-lang/rust.vim',       {'for': 'rust'}
 Plug 'sl4m/swift.vim',           {'for': 'swift', 'branch': 'vim-only'}
 Plug 'cespare/vim-toml',         {'for': 'toml'}
