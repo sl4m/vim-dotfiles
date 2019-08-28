@@ -1,0 +1,76 @@
+set nocompatible
+
+filetype plugin indent on
+syntax on
+
+set modelines=0
+set encoding=utf-8
+set nosmartindent
+set history=10000
+set number
+set background=dark
+set hidden
+set backspace=indent,eol,start
+set textwidth=0
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set bs=2
+set autoindent
+set expandtab
+
+set ttyfast
+set lazyredraw
+
+set cursorline
+set wrap
+set noswapfile
+
+nmap , \
+
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
+
+" no arrow keys in normal and insert modes
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+vnoremap <up> <nop>
+vnoremap <down> <nop>
+vnoremap <left> <nop>
+vnoremap <right> <nop>
+
+" navigate within wrapped line
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
+" emacs bindings in command line mode
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-d> <Delete>
+cnoremap <Esc>b <S-Left>
+cnoremap <Esc>f <S-Right>
+
+" keep the cursor in place while joining lines
+nnoremap J mzJ`z
+
+" split line
+" the normal use of S is covered by cc, so don't worry about shadowing it.
+nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
