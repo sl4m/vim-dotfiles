@@ -6,7 +6,7 @@ Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
 Plug 'ap/vim-buftabline'
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': { -> fzf#install() } }
 Plug 'scrooloose/nerdtree'
 Plug 'mtth/scratch.vim'
 Plug 'machakann/vim-highlightedyank'
