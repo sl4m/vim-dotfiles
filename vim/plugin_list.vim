@@ -4,11 +4,15 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
+Plug 'Shougo/deoplete.nvim', {'do': 'pip3 install --user pynvim'}
+Plug 'roxma/nvim-yarp'
 Plug 'ap/vim-buftabline'
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'scrooloose/nerdtree'
-Plug 'mtth/scratch.vim'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'mtth/scratch.vim', {'on': 'Scratch'}
 Plug 'machakann/vim-highlightedyank'
 Plug 'reedes/vim-wordy'
 
