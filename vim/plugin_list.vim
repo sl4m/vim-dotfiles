@@ -23,7 +23,7 @@ Plug 'elixir-lang/vim-elixir',   {'for': 'elixir'}
 Plug 'fatih/vim-go',             {'for': 'go'}
 Plug 'fatih/vim-hclfmt',         {'for': ['hcl', 'nomad', 'tf']}
 Plug 'pangloss/vim-javascript',  {'for': 'javascript'}
-Plug 'mxw/vim-jsx',              {'for': 'javascript'}
+Plug 'vim-jsx-pretty',           {'for': 'javascript'}
 Plug 'vim-ruby/vim-ruby',        {'for': 'ruby'}
 Plug 'tpope/vim-endwise',        {'for': 'ruby'}
 Plug 'rust-lang/rust.vim',       {'for': 'rust'}
