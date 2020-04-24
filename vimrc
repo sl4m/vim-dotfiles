@@ -6,6 +6,7 @@ so ~/.vim/plugin_list.vim
 filetype plugin indent on
 syntax on
 
+set cmdheight=2
 set modelines=0
 set encoding=utf-8
 set nosmartindent

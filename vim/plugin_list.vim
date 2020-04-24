@@ -3,22 +3,16 @@ call plug#begin('~/.vim/plugged')
 " tools
 
 Plug 'mileszs/ack.vim'
-Plug 'w0rp/ale'
-Plug 'Shougo/deoplete.nvim', {'do': 'pip3 install --user pynvim'}
-Plug 'roxma/nvim-yarp'
 Plug 'ap/vim-buftabline'
+Plug 'neoclide/coc.nvim',             {'branch': 'release', 'for': ['rust', 'toml']}
 Plug 'tpope/vim-fugitive'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'mtth/scratch.vim', {'on': 'Scratch'}
+Plug 'junegunn/fzf',                  {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'preservim/nerdtree',            {'on': 'NERDTreeToggle'}
+Plug 'mtth/scratch.vim',              {'on': 'Scratch'}
 Plug 'machakann/vim-highlightedyank'
-Plug 'reedes/vim-wordy'
 
 " languages
 
-Plug 'leafgarland/typescript-vim',  {'for': ['tsx', 'typescript']}
 Plug 'guns/vim-clojure-static',     {'for': 'clojure'}
 Plug 'elixir-lang/vim-elixir',      {'for': 'elixir'}
 Plug 'fatih/vim-go',                {'for': 'go'}
@@ -31,6 +25,7 @@ Plug 'tpope/vim-endwise',           {'for': 'ruby'}
 Plug 'rust-lang/rust.vim',          {'for': 'rust'}
 Plug 'sl4m/swift.vim',              {'for': 'swift', 'branch': 'vim-only'}
 Plug 'cespare/vim-toml',            {'for': 'toml'}
+Plug 'leafgarland/typescript-vim',  {'for': ['tsx', 'typescript']}
 Plug 'kana/vim-vspec',              {'for': 'vim'}
 
 " misc

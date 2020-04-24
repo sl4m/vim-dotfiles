@@ -6,7 +6,7 @@ For MacOS, install the latest stable `vim` via homebrew:
 
 For Linux, install the latest vim using your distro's package manager
 
-These dotfiles work on vim8 and up.
+These dotfiles work on vim 8.0.1453 and up.
 
 ## Install
 
@@ -21,23 +21,21 @@ After cloning the project, run the following:
 WARNING: running `./activate.rb` will overwrite existing .vimrc and .vim you
 have in your home directory.
 
-### Setting up LSP (Language Server Protocol)
+### Requirements for coc.nvim plugin
 
-This vim setup contains plugins for LSP support.
+[coc.nvim](https://github.com/neoclide/coc.nvim) plugin provides an intellisense engine plus full support for the language server protocol.
 
-* autozimu/LanguageClient-neovim
-* Shougo/deoplete.nvim
-* roxma/nvim-yarp
-* roxma/vim-hug-neovim-rpc
+For MacOS, install `node` via homebrew:
 
-At the moment, it's only configured to handle Rust, but more languages can be added as needed.
+    homebrew install node
 
-Follow the [instructions](https://rust-analyzer.github.io/manual.html#language-server-binary) to install the `rust-analyzer` binary.
+For Linux, install the latest node (>= 8.10) using your distro's package manager
 
-### Troubleshooting
+To enable Rust Analyzer for Rust:
 
-If there was an issue with the post-install for `deoplete` vim plugin, it might mean you have an older version of vim (this requires vim8) or your version of vim is not compiled with python3.
-To verify you have python3 support, run this command in vim: `:echo has("python3")`. It should return `1`.
+    # Start vim to install rust analyzer for Coc
+    vim
+    :CocInstall coc-rust-analyzer
 
 ## Notes
 
