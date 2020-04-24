@@ -1,5 +1,5 @@
 *.DS_Store
 *.sw[op]
 .netrwhist
-vim/plugin/vim_hardtime.vim
 vim/plugged
+vim/view

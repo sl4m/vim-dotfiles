@@ -4,12 +4,14 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'
 Plug 'ap/vim-buftabline'
-Plug 'neoclide/coc.nvim',             {'branch': 'release', 'for': ['rust', 'toml']}
+Plug 'neoclide/coc.nvim',             {'for': ['rust', 'toml'], 'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf',                  {'dir': '~/.fzf', 'do': './install --all'}
-Plug 'preservim/nerdtree',            {'on': 'NERDTreeToggle'}
-Plug 'mtth/scratch.vim',              {'on': 'Scratch'}
+Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree',            {'on': 'NERDTreeToggle'}
+Plug 'airblade/vim-rooter'
+Plug 'mtth/scratch.vim',              {'on': 'Scratch'}
 
 " languages
 

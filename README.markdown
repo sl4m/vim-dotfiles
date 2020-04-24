@@ -31,11 +31,13 @@ For MacOS, install `node` via homebrew:
 
 For Linux, install the latest node (>= 8.10) using your distro's package manager
 
-To enable Rust Analyzer for Rust:
+To enable Rust Analyzer extension for Rust:
 
-    # Start vim to install rust analyzer for Coc
+    # Start vim
     vim
     :CocInstall coc-rust-analyzer
+
+For other languages, browse [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions) for coc extensions.
 
 ## Notes
 
