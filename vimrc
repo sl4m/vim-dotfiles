@@ -90,7 +90,7 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 set winwidth=90
 set winminwidth=15
 
-" no arrow keys in normal and insert modes
+" no arrow keys in normal, insert, visual modes
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
