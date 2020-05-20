@@ -1,0 +1,22 @@
+#!/bin/bash
+set -euo pipefail
+
+if !(which vim > /dev/null)
+then
+  echo "Install vim before continuing"
+  exit 1
+fi
+
+echo ""
+read -n 1 -s -r -p "This will replace your existing ~/.vim and ~/.vimrc. Press any key to continue..."
+
+rm -rf ~/.vim
+rm -rf ~/.vimrc
+ln -s $(pwd)/vim ~/.vim
+ln -s $(pwd)/vimrc ~/.vimrc
+
+vim +PlugInstall +qall
+
+echo -e "\n\n"
+echo "vim setup complete ✓"
+echo -e "\n"

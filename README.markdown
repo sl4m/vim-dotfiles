@@ -10,16 +10,11 @@ These dotfiles work on vim 8.0.1453 and up.
 
 ## Install
 
-After cloning the project, run the following:
+After cloning the project, run the following setup script:
 
-    ./activate.rb
+    ./setup
 
-    # Start vim to install plugins
-    vim
-    :PlugInstall
-
-WARNING: running `./activate.rb` will overwrite existing .vimrc and .vim you
-have in your home directory.
+WARNING: running `./setup` will overwrite the existing .vim and .vimrc in your home directory.
 
 ### Requirements for coc.nvim plugin
 
