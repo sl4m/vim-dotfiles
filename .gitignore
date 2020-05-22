@@ -2,4 +2,5 @@
 *.sw[op]
 .netrwhist
 vim/plugged
+vim/undodir
 vim/view

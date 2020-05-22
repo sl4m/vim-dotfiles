@@ -1,20 +1,22 @@
 ## Requirements
 
+Note: This is compatible in both vim and nvim. If you prefer nvim, replace vim with nvim in the instructions below.
+
 For MacOS, install the latest stable `vim` via homebrew:
 
     homebrew install vim
 
 For Linux, install the latest vim using your distro's package manager
 
-These dotfiles work on vim 8.0.1453 and up.
+These dotfiles work on vim 8.0.1453 and up or nvim.
 
 ## Install
 
-After cloning the project, run the following setup script:
+After cloning the project, run the following setup script for vim:
 
-    ./setup
+    ./setup_vim
 
-WARNING: running `./setup` will overwrite the existing .vim and .vimrc in your home directory.
+WARNING: running `./setup_vim` will overwrite the existing .vim and .vimrc in your home directory.
 
 ### Requirements for coc.nvim plugin
 

@@ -1,0 +1,25 @@
+#!/bin/bash
+set -euo pipefail
+
+if !(which nvim > /dev/null)
+then
+  echo "Install nvim before continuing"
+  exit 1
+fi
+
+echo ""
+read -n 1 -s -r -p "This will replace your existing ~/.config/nvim/init.vim, ~/.vim and ~/.vimrc. Press any key to continue..."
+
+rm -rf ~/.config/nvim/init.vim
+rm -rf ~/.vim
+rm -rf ~/.vimrc
+mkdir -p ~/.config/nvim
+ln -s $(pwd)/init.vim ~/.config/nvim/init.vim
+ln -s $(pwd)/vim ~/.vim
+ln -s $(pwd)/vimrc ~/.vimrc
+
+nvim +PlugInstall +qall
+
+echo -e "\n\n"
+echo "nvim setup complete ✓"
+echo -e "\n"
