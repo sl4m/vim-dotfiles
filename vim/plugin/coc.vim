@@ -38,6 +38,8 @@ function! CocInitialise()
   nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent> gr <Plug>(coc-references)
 
+  nmap <leader>rn <Plug>(coc-rename)
+
   function! s:show_documentation()
     if (index(['vim','help'], &filetype) >= 0)
       execute 'h '.expand('<cword>')
@@ -47,6 +49,39 @@ function! CocInitialise()
   endfunction
 
   nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+  function FindCursorPopUp()
+     let radius = get(a:000, 0, 2)
+     let srow = screenrow()
+     let scol = screencol()
+
+     for r in range(srow - radius, srow + radius)
+       for c in range(scol - radius, scol + radius)
+         let winid = popup_locate(r, c)
+         if winid != 0
+           return winid
+         endif
+       endfor
+     endfor
+
+     return 0
+   endfunction
+
+   function ScrollPopUp(down)
+     let winid = FindCursorPopUp()
+     if winid == 0
+       return 0
+     endif
+
+     let pp = popup_getpos(winid)
+     call popup_setoptions( winid,
+           \ {'firstline' : pp.firstline + ( a:down ? 1 : -1 ) } )
+
+     return 1
+   endfunction
+
+   nnoremap <expr> <c-d> ScrollPopUp(1) ? '<esc>' : '<c-d>'
+   nnoremap <expr> <c-u> ScrollPopUp(0) ? '<esc>' : '<c-u>'
 endfunction
 
 autocmd! User coc.nvim call CocInitialise()
