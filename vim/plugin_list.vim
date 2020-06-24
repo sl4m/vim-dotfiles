@@ -9,7 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf',                  {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-highlightedyank'
-Plug 'preservim/nerdtree',            {'on': 'NERDTreeToggle'}
+Plug 'preservim/nerdtree',
 Plug 'airblade/vim-rooter'
 Plug 'mtth/scratch.vim',              {'on': 'Scratch'}
 
