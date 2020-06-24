@@ -50,7 +50,7 @@ function! CocInitialise()
 
   nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-  function FindCursorPopUp()
+  function! FindCursorPopUp()
      let radius = get(a:000, 0, 2)
      let srow = screenrow()
      let scol = screencol()
@@ -67,7 +67,7 @@ function! CocInitialise()
      return 0
    endfunction
 
-   function ScrollPopUp(down)
+   function! ScrollPopUp(down)
      let winid = FindCursorPopUp()
      if winid == 0
        return 0
