@@ -1,1 +1,1 @@
-map <silent> <LocalLeader>t :FZF<CR>
+map <silent> <LocalLeader>t :Files<CR>
