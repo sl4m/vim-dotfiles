@@ -22,6 +22,7 @@ Plug 'fatih/vim-hclfmt',            {'for': ['hcl', 'nomad', 'tf']}
 Plug 'pangloss/vim-javascript',     {'for': 'javascript'}
 Plug 'MaxMEllon/vim-jsx-pretty',    {'for': 'javascript'}
 Plug 'peitalin/vim-jsx-typescript', {'for': ['tsx', 'typescript']}
+Plug 'protocolbuffers/protobuf',    {'rtp': 'editors'}
 Plug 'vim-ruby/vim-ruby',           {'for': 'ruby'}
 Plug 'tpope/vim-endwise',           {'for': 'ruby'}
 Plug 'rust-lang/rust.vim',          {'for': 'rust'}
